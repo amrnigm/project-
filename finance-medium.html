@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establish</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=OFL+Sorts+Mill+Goudy+TT:wght@400&family=Oleo+Script+Swash+Caps&display=swap">
+    <link rel="icon" href="icon.png" type="image/png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'OFL Sorts Mill Goudy TT', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        
+        header {
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            color: rgb(0, 0, 0);
+            cursor: default;
+            font-size: 32px;
+            position: relative;
+        }
+
+        .header-back {
+            padding: 40px;
+            position: fixed;
+            top: 0;
+            right: 40px;
+            font-size: 32px;
+            font-family: 'OFL Sorts Mill Goudy TT', sans-serif;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+
+        .section {
+            flex: 1;
+            padding: 20px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+        }
+
+        .section::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 250px;
+            background-color: #fff;
+            border-radius: 50%;
+            z-index: 1;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Removed box-shadow transition */
+        }
+
+        .section:hover::before {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Added box-shadow */
+        }
+
+        .left-section::before {
+            background-image: url('sandah.jpg');
+        }
+
+        .middle-section::before {
+            background-image: url('tsahel.png');
+        }
+
+        .right-section::before {
+            background-image: url('aman-icon.png');
+            background-color: black;
+            background-size: 90%;
+        }
+
+        .left-section {
+            background-color: #93B1A6;
+        }
+        
+        .middle-section {
+            background-color: #5C8374;
+        }
+        
+        .right-section {
+            background-color: #183D3D;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Establish</h1>
+        <h1 class="header-back" onclick="window.location.href='page4.html';">Back</h1>
+    </header>
+
+    <div class="container">
+        <a href="sandah-small.html" class="section left-section"></a>
+        <a href="tsahel-small.html" class="section middle-section"></a>
+        <a href="aman-small.html" class="section right-section"></a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Establish</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="icon" href="icon.png" type="image/png">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: rgb(147,177,166);
+    background: linear-gradient(to bottom, rgba(147,177,166,1) 0%, rgba(4,13,18,1) 50%, rgba(4,13,18,1) 100%);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .header {
+    background-color: #78928a;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+    font-family: 'OFL Sorts Mill Goudy TT';
+  }
+
+  .header h1 {
+    margin: 0;
+  }
+
+  .back-button {
+    background-color: #007bff00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 20px;
+    font-size: 32px;
+    font-family: 'OFL Sorts Mill Goudy TT';
+  }
+
+  .back-button:hover {
+    color: white;
+  }
+  .requirements-header {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+  }
+
+  .requirements-header h2 {
+    color: #fff;
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+  }
+
+  .container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .card {
+    display: block;
+    position: relative;
+    max-width: 300px;
+    max-height: 320px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 2em 1.2em;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #abc9be, #93B1A6);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .card:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, #204646, #183D3D);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out;
+  }
+
+  .card:hover:before {
+    transform: scale(28);
+  }
+
+  .card:hover .small-desc {
+    transition: all 0.5s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .card:hover .card-title {
+    transition: all 0.5s ease-out;
+    color: #ffffff;
+  }
+
+  .card-header {
+    background-color: #ffffff00;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-content {
+    padding: 15px;
+    display: none;
+  }
+
+  .card.active .card-content {
+    display: block;
+  }
+
+  .fas.fa-chevron-down {
+    transition: transform 0.3s ease;
+  }
+
+  .card.active .fas.fa-chevron-down {
+    transform: rotate(180deg);
+  }
+
+  .card-title {
+    color: #262626;
+    font-size: 1.3em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+
+  .small-desc {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #452c2c;
+  }
+
+  .small-desc {
+    font-size: 20px;
+  }
+
+  .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1e4444, #183D3D);
+    border-radius: 0 4px 0 32px;
+  }
+
+  .go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+  }
+
+  @media screen and (max-width: 600px) {
+    .card {
+      width: calc(100% - 24px);
+      max-width: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Establish</h1>
+  <button class="back-button" onclick="window.location.href='page2.html';">Back</button>
+</div>
+
+<div class="requirements-header">
+  <h2>Requirements:</h2>
+</div>
+
+<div class="container">
+  <div class="card" onclick="toggleCard(this)">
+    <div class="card-header">
+      <div class="card-title">Extracting the tax<br> card</div>
+      <div class="go-corner">
+      </div>
+    </div>
+    <div class="card-content">
+      <p class="small-desc">
+          You can now obtain the tax card for your project with the help of a specialist. <br><br>
+
+          Obtain a tax card for your project, regardless of its legal form, whether it is a commercial, industrial, professional, craft, or even service project. All you have to do is register the basic data about you and your project with the relevant employee so that we can notify the competent authority to carry out the activity within thirty days from the date of starting the activity.</p>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card" onclick="toggleCard(this)">
+    <div class="card-header">
+      <div class="card-title">Extracting the commercial register</div>
+      <div class="go-corner">
+      </div>
+    </div>
+    <div class="card-content">
+      <p class="small-desc">The commercial registry system is a governmental system for registering the data of various types of merchants, whether individuals, companies, or large institutions. Where the commercial activity and the changes and amendments that are made to it are registered, whether the name of the establishment or address is changed, a new activity is added, or an existing activity is deleted, and other possible changes that may occur to the commercial activity.<br><br>
+
+        This allows the state to identify the amount of economic, commercial and agricultural activity, and thus be able to set future development plans with the utmost accuracy and clarity.
+        </p>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card" onclick="toggleCard(this)">
+    <div class="card-header">
+      <div class="card-title">
+        Issuing classification and benefits certificates</div>
+      <div class="go-corner">
+      </div>
+    </div>
+    <div class="card-content">
+      <p class="small-desc">If you are one of the owners of medium, small or micro projects, you can now obtain project classification certificates and deal with government agencies to obtain many facilitations and tax benefits for the Enterprise Development Law No. 152 of 2020.<br><br>
+
+        It is a certificate issued by one-stop-shop units stating that your project is subject to the Project Development Law No. 152 of 2020. It serves as a birth certificate for the project and a gateway to the project’s subjection to the law and its many incentives and benefits that indicate the nature of the project and its classification in the market.<br><br>
+
+        Certificate of dealing with government agencies and enjoying the benefits stipulated in the law.​
+        </p>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card" onclick="toggleCard(this)">
+    <div class="card-header">
+      <div class="card-title">Temporary license to operate</div>
+      <div class="go-corner">
+      </div>
+    </div>
+    <div class="card-content">
+      <p class="small-desc">Obtaining all the necessary licenses to operate your project through a strong network that operates in a system that includes all parties concerned with obtaining the necessary licenses and approvals to establish projects. <br><br>
+
+        You can now extract all temporary and final operating licenses from one place to reduce the burden on you and save time and effort.<br><br>
+
+        A temporary project license is a license granted to operate the project on a temporary basis and is for a period of one year for new projects and for a period of five years to adjust the conditions of informal economy projects. It is considered a productive license with all its legal effects.​
+        </p>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="card" onclick="toggleCard(this)">
+    <div class="card-header">
+      <div class="card-title">Opening the facility's insurance file</div>
+      <div class="go-corner">
+      </div>
+    </div>
+    <div class="card-content">
+      <p class="small-desc">Providing the service of opening the insurance file for your project; Egyptian law requires - in accordance with Article No. (3) of the Egyptian Labor Law - that all companies or individuals who practice industrial or commercial activity must open an insurance file, whether for their company, factory, institution, etc., in accordance with the principle of transferring responsibility for confronting risks. Social responsibility from the individual to the group.<br><br>
+
+        The conditions for opening an insurance file for establishments vary depending on the legal form of the establishment, whether it is a personal company (individual/solidarity/simple partnership) or a capital company (limited liability/shareholding).<br><br>
+
+
+        All you have to do is submit the necessary documents to preserve your right and the rights of workers to social protection, and the insurance file for your project will be registered as soon as you submit it within the Authority’s information and data base.
+        </p>
+    </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="card" onclick="toggleCard(this)">
+    <div class="card-header">
+      <div class="card-title">Extracting the industrial register</div>
+      <div class="go-corner">
+      </div>
+    </div>
+    <div class="card-content">
+      <p class="small-desc">The industrial register is one of the basic requirements that must be obtained before starting the project. It is a document that is granted by the Ministry of Industry and Mineral Resources with the aim of starting to practice activities in all fields according to what is specified by the project owner in the document.<br><br>
+
+        With the government’s support for entrepreneurs, obtaining the industrial register provides many incentives and advantages, including:<br> <br>
+        Obtaining an exemption from the financial compensation for employment.<br><br>
+        Obtaining customs exemption for raw materials and machinery.<br><br>
+        Employment support service.<br><br>
+        Chemical cleaning service.<br><br>
+        Giving priority to local factories in contracting with government and private agencies, using the document as an official document</p>
+    </div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="card" onclick="toggleCard(this)">
+    <div class="card-header">
+      <div class="card-title">Trademark registration<br>...</div>
+      <div class="go-corner">
+      </div>
+    </div>
+    <div class="card-content">
+      <p class="small-desc">A trademark is an expressive means that symbolizes the products or services of a specific company or entity that distinguishes it from other products or services of others and is in the form of an image, design or logo.<br><br>
+
+        Registering a trademark is an important step for any startup or existing company, as it provides the project owner with many advantages, the most important of which are:<br><br>
+
+        This gives you the exclusive right to use and market the trademark and prevent others from using it without permission<br><br>
+        Protecting the brand from theft or imitation and distinguishing your products from other competitors<br><br>
+        The brand creates a relationship of trust with consumers and building a broad customer base contributes to a high rate of sales</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggleCard(card) {
+  card.classList.toggle("active");
+}
+
+function goBack() {
+  window.history.back();
+}
+</script>
+
+</body>
+</html>

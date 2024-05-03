@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establish</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=OFL+Sorts+Mill+Goudy+TT:wght@400&family=Oleo+Script+Swash+Caps&display=swap">
+    <link rel="icon" href="icon.png" type="image/png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'OFL Sorts Mill Goudy TT', sans-serif;
+            overflow: hidden;
+        }
+
+        header {
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            color: rgb(0, 0, 0);
+            cursor: default;
+            font-size: 32px;
+            position: relative;
+        }
+
+        .header-back {
+            padding: 40px;
+            position: fixed;
+            top: 0;
+            right: 40px;
+            font-size: 32px;
+            font-family: 'OFL Sorts Mill Goudy TT', sans-serif;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+
+        .background-pics-container {
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .background-pic {
+            flex: 1;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .pic-header {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Oleo Script Swash Caps', cursive;
+            font-size: 170px;
+            color: white;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            z-index: 1;
+            transition: color 0.3s ease; /* Add transition for smooth color change */
+        }
+
+        .pic-header:hover {
+            color: black; /* Change color to black on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Establish</h1>
+        <h1 class="header-back" onclick="window.location.href='business.html';">Back</h1>
+    </header>
+
+    <div class="background-pics-container">
+        <div class="background-pic" style="background-image: url('finance1.jpg');">
+            <h2 class="pic-header" onclick="window.location.href='finance-micro.html';">Finance</h2>
+        </div>
+        <div class="background-pic" style="background-image: url('business1.jpeg');">
+            <h2 class="pic-header" onclick="window.location.href='bus.html';">Business</h2>
+        </div>
+    </div>
+
+</body>
+</html>

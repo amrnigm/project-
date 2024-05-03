@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establish</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=OFL+Sorts+Mill+Goudy+TT:wght@400&family=Oleo+Script+Swash+Caps&display=swap">
+    <link rel="icon" href="icon.png" type="image/png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'OFL Sorts Mill Goudy TT', sans-serif;
+            overflow-y: auto;
+            display: flex; /* Added */
+            flex-direction: row; /* Added */
+            background-color: white;
+            background-image: url('background2.jpg'); /* Add your image URL here */
+            background-size: cover; /* Adjusts the background image size to cover the entire viewport */
+        }
+
+        header {
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: transparent;
+        }
+
+        header h1 {
+            margin: 0;
+            color: rgb(0, 0, 0);
+            cursor: default;
+            font-size: 32px;
+            position: relative;
+        }
+
+        .header-back {
+            padding: 40px;
+            position: fixed;
+            top: 0;
+            right: 40px;
+            font-size: 32px;
+            font-family: 'OFL Sorts Mill Goudy TT', sans-serif;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            z-index: 1000;
+            background-color: transparent;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            background-color: #000000;
+            border-radius: 50%;
+            position: fixed;
+            top: 50px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .left-content {
+            flex: 1;
+            padding: 170px;
+            color: whitesmoke;
+            font-size: 22px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .right-content {
+            flex: 1;
+            padding: 170px;
+            font-size: 22px;
+            color: whitesmoke;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .left-content ul,
+        .right-content ul {
+            margin-top: 30px; /* Add space between rows */
+        }
+
+        .left-content li,
+        .right-content li {
+            margin-bottom: 20px; /* Add space between rows */
+        } 
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Establish</h1>
+        <h1 class="header-back" onclick="window.location.href='finance-micro.html';">Back</h1>
+    </header>
+
+    <div class="container">
+        <div class="circle">
+            <img src="aman-icon.png" alt="Your Image">
+        </div>
+    </div>
+    <div class="left-content">
+        <h2>Microfinance</h2>
+        <ul>
+            <li>Minimum Financing Is 6,000 EGP.</li>
+            <li>The Highest Financing Is 200,000 EGP.</li>
+            <li>The Minimum Age For The Financing Applicant Is 21 Years And The Maximum Is 63 Upon The Expiry Of The Last Financing Installment Payment Date.</li>
+            <li>The client must have an existing income-generating activity that is sufficient to pay the amount of the Money and its expenses.</li>
+            <li>A Guarantor Is Required.</li>
+            <li>The customer provides what is the place of his moderation of the activity and his permanent residence.</li>
+            <li>He must not be a guarantor of one of the company’s existing clients.</li>
+        </ul>
+    </div>
+
+    <div class="right-content">
+        <h2>Papers And Documents:</h2>
+        <ul>
+            <li>Fill Out The Financing Application Form With The Signatures Of The Financing Applicant And The Guarantor.</li>
+            <li>A Valid National ID Card (Customer And Guarantor).</li>
+            <li>Proof of residence of the client, the guarantor, and the location of the activity by submitting any government document (electricity, gas, telephone, water receipt).</li>
+            <li>An activity licence, tax card, commercial registry, and a recent extract from it (if available) (and in cases where this is required) the financing amount is greater than 35,000 pounds.</li>
+            <li>Conducting credit inquiries about customers through the company.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establish</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=OFL+Sorts+Mill+Goudy+TT:wght@400&family=Oleo+Script+Swash+Caps&display=swap">
+    <link rel="icon" href="icon.png" type="image/png">
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'OFL Sorts Mill Goudy TT', sans-serif;
+            overflow: hidden;
+            background-color: #040D12;
+        }
+
+        header {
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            color: rgb(0, 0, 0);
+            cursor: default;
+            font-size: 32px;
+            position: relative;
+        }
+
+        .header-back {
+            padding: 40px;
+            position: fixed;
+            top: 0;
+            right: 40px;
+            font-size: 32px;
+            font-family: 'OFL Sorts Mill Goudy TT', sans-serif;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+
+        .background-pics-container {
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+            width: 50%; /* Set container width to 50% of the screen */
+        }
+
+        .background-pic {
+            flex: 1;
+            height: 65%;
+            width: 50%; /* Set width to 50% of its container */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            height: 350px;
+            cursor: default;
+
+        }
+        .content h1{
+            font-size: 35px;
+            margin-top: 13%;
+            color: #93B1A6;
+            margin-left: 7%;
+        }
+        .content p{
+            font-size: 25px;
+            margin-left: 42%;
+        }
+
+        .range-sliders {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5%;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+
+        .slider-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 40%; /* Adjust the width as needed */
+        }
+
+        .slider-label {
+            color: white;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            background: #5C8374; /* Default color */
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .2s;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white; /* Range color */
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white; /* Range color */
+            cursor: pointer;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider:focus {
+            opacity: 1;
+        }
+
+        .output-box {
+            color: white;
+            font-size: 25px;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style for the continue button */
+        .continue-button {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #5C8374;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'OFL Sorts Mill Goudy TT', serif;
+            font-weight: bold;
+        }
+
+        .continue-button:hover {
+            background-color: #ffffff;
+        }
+        .header {
+            position: fixed;
+            bottom: 180px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 80%;
+            color: white;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Establish</h1>
+    <h1 class="header-back" onclick="window.location.href='home.html';">Back</h1>
+</header>
+
+<div class="background-pics-container">
+    <div class="background-pic" style="background-image: url('pic1.jpg');"></div>
+</div>
+<div class="content">
+    <h1>We Are Establish</h1>
+    <p>Here we will provide a step by step guidance on<br>how to set up your micro, small or medium-sized business in egypt
+        <br>We will explore the legal and regulatory  requirements, necessary documentation, and the process of registration.
+        <br><br> Additionally, we will highlight available resources,<br> support networks, and financial incentives specifically tailored to assist SMEs in Egypt.</p>
+</div>
+
+<div class="range-sliders">
+    <div class="slider-container">
+        <label for="slider1" class="slider-label">Budget</label>
+        <input type="range" min="0" max="50" value="0" step="25" class="slider" id="slider1">
+        <output class="output-box" id="output1">$0</output>
+    </div>
+    <div class="slider-container">
+        <label for="slider2" class="slider-label">Employees</label>
+        <input type="range" min="0" max="200" value="0" class="slider" id="slider2">
+        <output class="output-box" id="output2">0</output>
+    </div>
+</div>
+<div class="header">
+    <h2>Select your budget and number of employees</h2>
+</div>
+
+<!-- Continue Button -->
+<button class="continue-button" onclick="window.location.href='page2.html'">Continue</button>
+
+<script>
+    // Get the sliders and output boxes
+   // Get the sliders and output boxes
+var slider1 = document.getElementById("slider1");
+var output1 = document.getElementById("output1");
+var slider2 = document.getElementById("slider2");
+var output2 = document.getElementById("output2");
+
+var budgetRanges = {
+    0: "$0-$50k",
+    25: "$50K-$5M",
+    50: "$5M+"
+};
+
+// Display the default value
+output1.innerHTML = budgetRanges[slider1.value]; // Display the budget range corresponding to the default value
+output2.innerHTML = slider2.value;
+
+// Update the output box value when slider value changes
+slider1.oninput = function() {
+    var value = parseInt(this.value);
+    output1.innerHTML = budgetRanges[value]; // Display the budget range corresponding to the selected value
+}
+
+// Continue button click event
+document.querySelector('.continue-button').addEventListener('click', function() {
+    var budgetRange = parseInt(slider1.value);
+    var nextPage = '';
+
+    // Determine the next page based on the selected budget range
+    if (budgetRange === 0) {
+        nextPage = 'page2.html';
+    } else if (budgetRange === 25) {
+        nextPage = 'page3.html';
+    } else if (budgetRange === 50) {
+        nextPage = 'page4.html';
+    }
+
+    // Redirect to the next page
+    if (nextPage !== '') {
+        window.location.href = nextPage;
+    }
+});
+
+slider2.oninput = function() {
+    output2.innerHTML = this.value;
+}
+
+</script>
+
+</body>
+</html>
